@@ -1,0 +1,8 @@
+<h1>Pets</h1>
+<ng-container *ngIf="pets$ | async as pets">
+  <ul>
+    <li *ngFor="let pet of pets">{{ pet.name }}</li>
+  </ul>
+</ng-container>
+
+<mat-table [dataSource]="pets$ | async"> </mat-table>
